@@ -16,12 +16,12 @@
     <%= f.text_field :body %>
   </div>
   <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
+    <%= f.label :user_id, "User" %><br>
+    <%= f.select :user_id, @all_users %>
   </div>
   <div class="field">
-    <%= f.label :belongs_to %><br>
-    <%= f.text_field :belongs_to %>
+    <%= f.label :link_id, "Link" %><br>
+    <%= f.select :link_id, @all_links %>
   </div>
   <div class="actions">
     <%= f.submit %>

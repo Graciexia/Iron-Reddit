@@ -11,13 +11,13 @@
 </p>
 
 <p>
-  <strong>Belong to:</strong>
-  <%= @link.belong_to %>
+  <strong>User:</strong>
+  <%= link_to @link.user.name %>
 </p>
 
 <p>
-  <strong>:</strong>
-  <%= @link. %>
+  <strong>Category</strong>
+  <%=  link_to @link.board.category %>
 </p>
 
 <%= link_to 'Edit', edit_link_path(@link) %> |

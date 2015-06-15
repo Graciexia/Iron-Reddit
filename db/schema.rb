@@ -54,12 +54,14 @@ ActiveRecord::Schema.define(version: 20150613203009) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.string   "number"
+    t.integer  "number"
+    t.string   "voter_user_id"
+    t.string   "vote_direction"
     t.integer  "user_id"
     t.integer  "link_id"
     t.integer  "comment_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "votes", ["comment_id"], name: "index_votes_on_comment_id", using: :btree

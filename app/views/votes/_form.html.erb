@@ -15,6 +15,18 @@
     <%= f.label :number %><br>
     <%= f.text_field :number %>
   </div>
+     <div class="field">
+    <%= f.label :voter_user_id, "Voter" %><br>
+    <%= f.select :voter_user_id, @all_users %>
+  </div>
+   <div class="field">
+    <%= f.label :vote_direction, "Vote Direction" %><br>
+    <%= f.select :vote_direction, ["up", "down"] %>
+  </div>
+  <div class="field">
+    <%= f.label :link_id, "Link" %><br>
+    <%= f.select :link_id, @all_links %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

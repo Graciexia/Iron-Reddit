@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   def self.select_users
     all.map { |user| [user.email, user.id] }
   end
+
 end

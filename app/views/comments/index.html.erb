@@ -7,7 +7,6 @@
     <tr>
       <th>Body</th>
       <th>User</th>
-      <th>Belongs to</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +15,7 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.body %></td>
-        <td><%= comment.user %></td>
-        <td><%= comment.belongs_to %></td>
+
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'New Comment', new_comment_path %><br>
+<%= link_to 'Log in', login_path %> |
+<%= link_to 'Log out', logout_path %>

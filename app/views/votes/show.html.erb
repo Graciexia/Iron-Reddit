@@ -4,6 +4,16 @@
   <strong>Number:</strong>
   <%= @vote.number %>
 </p>
+<p>
+  <strong>Voter:</strong>
+  <%= @vote.voter_user_id %>
+</p>
+<p>
+  <strong>Voter_Direction:</strong>
+  <%= @vote.vote_direction %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_vote_path(@vote) %> |
 <%= link_to 'Back', votes_path %>

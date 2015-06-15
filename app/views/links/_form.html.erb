@@ -20,13 +20,14 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :belong_to %><br>
-    <%= f.text_field :belong_to %>
+    <%= f.label :user_id, "User" %><br>
+    <%= f.select :user_id, @all_users %>
   </div>
   <div class="field">
-    <%= f.label : %><br>
-    <%= f.text_field : %>
+    <%= f.label :board_id, "Category" %><br>
+    <%= f.select :board_id, @all_categories %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
