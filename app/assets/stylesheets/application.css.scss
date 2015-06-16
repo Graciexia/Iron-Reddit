@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "boards";
+@import "comments";
+@import "links";
+@import "users";
+@import "votes";

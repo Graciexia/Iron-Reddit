@@ -3,7 +3,10 @@ class LinksController < ApplicationController
 
 
   def index
-    @links = Link.all
+    # @links_and_votes = Link.all
+    @links_and_votes = Link.select('links.id, post, title, sum(number) as "vote_count"')
+                           .joins('left join votes on votes.link_id = links.id')
+                           .group('links.id')
   end
 
   def show
